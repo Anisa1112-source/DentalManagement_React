@@ -1,0 +1,125 @@
+/* ========= LOGIN SPLIT-SCREEN (FRAME 1 FIGMA) ========== */
+.login-split-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.login-left-brand {
+    width: 45%;
+    background: #3498db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.login-left-brand h1 {
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.login-left-brand h2 {
+    color: #001a8d;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.login-left-brand p {
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+    max-width: 340px;
+    line-height: 1.5;
+}
+
+.login-right-form {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    padding: 40px;
+}
+
+.login-form-box {
+    width: 400px;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.login-form-box h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #222;
+}
+
+.avatar {
+    text-align: center;
+    font-size: 60px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #e8e8e8;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    font-size: 14px;
+    outline: none;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+    font-size: 13px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}

@@ -1,0 +1,103 @@
+/* =========================================
+   PERSETUJUAN
+========================================= */
+.approval-text {
+  margin: 20px 35px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #676060;
+  line-height: 1.6;
+}
+
+.approval-text span {
+  color: #001f8f;
+  font-weight: 600;
+}
+
+.approval-wrapper {
+  width: 82%;
+  margin: auto;
+  background: #D7F0FF;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.approval-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.red-card { background: #ff7f88; }
+.green-card { background: #c8efc6; }
+
+.approval-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.approval-icon {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3498db;
+  font-size: 18px;
+}
+
+.approval-info h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 3px;
+}
+
+.approval-info p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.6;
+}
+
+.approval-info small {
+  font-size: 13px;
+  font-weight: 500;
+  color: #676060;
+  line-height: 1.6;
+}
+
+.approval-action {
+  display: flex;
+  gap: 14px;
+}
+
+.btn-approve {
+  background: #17d317;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-reject {
+  background: #ff5f70;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}

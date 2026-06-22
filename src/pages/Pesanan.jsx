@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"; 
-import "../style/Style.css";
+import "../style/pesananAdmin.css";
 
 function Pesanan() {
   return (

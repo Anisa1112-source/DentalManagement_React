@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../style/Style.css";
+import "../style/pengirimanAdmin.css";
 
 function Pengiriman() {
   const [dataPengiriman, setDataPengiriman] = useState([]);

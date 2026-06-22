@@ -1,0 +1,102 @@
+/* ================= HALAMAN PESANAN (ADMIN) ================= */
+.filter-bar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.filter-search input {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #dde3ee;
+  font-size: 13px;
+  background: white;
+  width: 220px;
+  outline: none;
+  color: #333;
+}
+
+.filter-select select {
+  padding: 10px 36px 10px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #dde3ee;
+  font-size: 13px;
+  background: white;
+  outline: none;
+  color: #333;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.filter-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #dde3ee;
+  background: white;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+}
+
+.filter-date i { color: #3498db; }
+
+.table-card {
+  background: #D7F0FF;
+  border-radius: 12px;
+  padding: 10px 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow-x: auto;
+}
+
+.pesanan-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.pesanan-table thead tr {
+  border-bottom: 1.5px solid #b0d8ee;
+}
+
+.pesanan-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #222;
+  font-size: 13px;
+}
+
+.pesanan-table tbody tr {
+  border-bottom: 1px solid #c2e4f5;
+}
+
+.pesanan-table tbody tr:last-child { border-bottom: none; }
+
+.pesanan-table td {
+  padding: 14px 16px;
+  color: #676060;
+  font-size: 13px;
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+.pesanan-table td:first-child,
+.pesanan-table td:nth-child(2) {
+  color: #222;
+  font-weight: 500;
+}
+
+.aksi-link {
+  color: #3498db;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.aksi-link:hover { text-decoration: underline; }

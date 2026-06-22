@@ -30,7 +30,7 @@ function DokterPengiriman() {
     <div className="dashboard-container">
       <div className="sidebar">
         <div className="sidebar-logo">
-          <div style={{ fontSize: "22px" }}>🦷</div>
+          <div style={{ fontSize: "22px" }}></div>
           <div><p className="logo-title">DENTAL</p><p className="logo-sub">SYSTEM</p></div>
         </div>
         <nav className="sidebar-nav">

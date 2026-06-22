@@ -1,0 +1,304 @@
+/* ---- SIDEBAR ---- */
+.sidebar {
+  width: 160px;
+  min-width: 160px;
+  background: #3498db;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  height: 100vh;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px 28px;
+}
+
+.sidebar-logo img {
+  width: 38px;
+  filter: brightness(0) invert(1);
+}
+
+.logo-title {
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.sidebar-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 10px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.nav-item:hover { background: rgba(255,255,255,0.15); }
+.nav-item.active { background: #1a6fa8; }
+
+.btn-keluar {
+  margin: 16px 10px 0;
+  width: calc(100% - 20px);
+  padding: 11px;
+  background: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+/* ---- MAIN AREA ---- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 0 20px 20px;
+}
+
+/* ---- TOPBAR ---- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 14px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-left h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.topbar-left i {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #676060;
+}
+
+.topbar-right i {
+  font-size: 18px;
+  color: #676060;
+}
+
+.admin-avatar {
+  font-size: 26px;
+  color: #676060;
+}
+
+/* ---- STAT CARDS ---- */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #676060;
+  margin-bottom: 6px;
+}
+
+.stat-number {
+  font-size: 34px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.1;
+}
+
+.stat-desc {
+  font-size: 11px;
+  color: #676060;
+  margin-top: 4px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  flex: 1;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 14px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.card-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+.card-header a {
+  font-size: 12px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pesanan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #D7F0FF;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.drg-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.drg-sub {
+  font-size: 11px;
+  color: #676060;
+  margin-top: 2px;
+}
+
+/* ---- BADGES (ADMIN - Dashboard, Pesanan Admin, dll) ---- */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 0;
+  border-radius: 20px;
+  white-space: nowrap;
+  width: 68px;
+  text-align: center;
+  display: inline-block;
+}
+
+.badge-proses  { background: #F6F34C; color: #222; }
+.badge-baru    { background: #FF9DA7; color: #222; }
+.badge-selesai { background: #8FF669; color: #222; }
+.badge-revisi  { background: #A89EF5; color: #fff; }
+
+/* ---- RIGHT COL ---- */
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---- STATUS PRODUKSI ---- */
+.produksi-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.produksi-item:last-child { border-bottom: none; }
+
+.produksi-label {
+  font-size: 13px;
+  color: #333;
+  font-weight: 400;
+}
+
+.produksi-pct {
+  font-size: 13px;
+  color: #676060;
+  font-weight: 500;
+}
+
+/* ---- JADWAL ---- */
+.jadwal-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #D7F0FF;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+.jadwal-time {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  min-width: 40px;
+}
+
+.jadwal-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.jadwal-sub {
+  font-size: 11px;
+  color: #676060;
+  margin-top: 2px;
+}

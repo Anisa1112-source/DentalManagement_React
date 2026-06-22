@@ -1,0 +1,136 @@
+.link-kembali-dokter {
+  background: none;
+  border: none;
+  color: #1d6fd1;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-header-row-dokter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.detail-id-title-dokter {
+  margin: 0;
+  color: #1d6fd1;
+  font-size: 18px;
+}
+
+.btn-ajukan-revisi-dokter {
+  background: #e0273f;
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.detail-grid-top-dokter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.detail-grid-bottom-dokter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detail-card-dokter {
+  background: #cfe9fb;
+  border-radius: 14px;
+  padding: 22px;
+  border: none;
+  box-shadow: none;
+}
+
+.detail-card-header-dokter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.detail-card-title-dokter {
+  margin: 0 0 16px 0;
+  color: #1d6fd1;
+  font-size: 15px;
+}
+
+.detail-card-header-dokter .detail-card-title-dokter {
+  margin-bottom: 0;
+}
+
+.info-row-dokter {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.info-label-dokter {
+  font-size: 12.5px;
+  color: #5a6b7a;
+}
+
+.info-value-dokter {
+  font-size: 14.5px;
+  color: #1c1c1c;
+  font-weight: 500;
+}
+
+.timeline-dokter {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.timeline-item-dokter {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.timeline-dot-dokter {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: #1d6fd1;
+  flex-shrink: 0;
+}
+
+.timeline-dot-dokter.pending {
+  background: #b9c4cd;
+}
+
+.timeline-label-dokter {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin: 0;
+}
+
+.timeline-label-dokter.pending {
+  color: #9aa6af;
+}
+
+.timeline-date-dokter {
+  font-size: 12.5px;
+  color: #7a8a96;
+  margin-top: 2px;
+}

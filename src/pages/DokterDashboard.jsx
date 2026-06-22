@@ -9,7 +9,7 @@ function DokterDashboard() {
       {/* SIDEBAR DOKTER (4 Menu Sesuai Figma) */}
       <div className="sidebar">
         <div className="sidebar-logo">
-          <div style={{ fontSize: "32px" }}>🦷</div>
+          <div style={{ fontSize: "32px" }}></div>
           <div><p className="logo-title">DENTAL</p><p className="logo-sub">SYSTEM</p></div>
         </div>
         <nav className="sidebar-nav">

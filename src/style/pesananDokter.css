@@ -1,0 +1,83 @@
+.filter-bar-dokter {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.input-search-dokter {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+}
+
+.select-filter-dokter {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  background: white;
+  min-width: 150px;
+  color: #475569;
+}
+
+.table-card-dokter {
+  background: #cfe9fb;
+  border-radius: 14px;
+  padding: 22px;
+  border: none;
+  box-shadow: none;
+}
+
+.table-pesanan-dokter {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-pesanan-dokter thead th {
+  text-align: left;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+  padding: 8px 10px;
+}
+
+.table-pesanan-dokter tbody td {
+  padding: 16px 10px;
+  font-size: 14px;
+  color: #1c1c1c;
+  border-top: 1px solid #9cc6e8;
+}
+
+.table-pesanan-dokter .td-id {
+  font-weight: 700;
+  color: #1a5694;
+}
+
+.link-detail-dokter {
+  background: none;
+  border: none;
+  color: #1d6fd1;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.badge-dokter {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 14px;
+}
+
+.badge-dokter-proses    { background: #ffe69c; color: #7a5d00; }
+.badge-dokter-selesai   { background: #bdf0c5; color: #1c7a34; }
+.badge-dokter-menunggu  { background: #ffc9c9; color: #a31d1d; }
+.badge-dokter-revisi    { background: #d8cdf5; color: #5b3aa8; }
+.badge-dokter-default   { background: #e2e8f0; color: #475569; }
