@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Pesanan from "./pages/Pesanan"; 
+import DetailPesanan from "./pages/DetailPesanan"; // 🌟 TAMBAHAN: Import file Detail Pesanan Admin yang baru dibuat
 import Persetujuan from "./pages/Persetujuan";
 import Produksi from "./pages/Produksi";
 import Pengiriman from "./pages/Pengiriman";
@@ -38,6 +39,10 @@ function App() {
         {/* ========================================== */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/pesanan" element={<Pesanan />} />
+        
+        {/* 🌟 TAMBAHAN: Jalur Route inilah yang membuat link detail admin berfungsi dan tidak kosong lagi */}
+        <Route path="/pesanan/:id" element={<DetailPesanan />} />
+        
         <Route path="/persetujuan" element={<Persetujuan />} />
         <Route path="/produksi" element={<Produksi />} />
         <Route path="/pengiriman" element={<Pengiriman />} />

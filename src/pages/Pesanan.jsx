@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom"; 
-import "../style/pesananAdmin.css";
+import React from "react";
+import { Link } from "react-router-dom";
+import "../style/pesananAdmin.css"; // Memakai file CSS utama agar otomatis rapi
 
 function Pesanan() {
   return (
     <div className="dashboard-container">
-
-      {/* SIDEBAR */}
+      
+      {/* SIDEBAR DENGAN IKON LENGKAP */}
       <div className="sidebar">
-
         <div className="sidebar-logo">
           <img src="/assets/Logo.png" alt="Logo" />
           <div>
@@ -20,57 +20,53 @@ function Pesanan() {
           <Link to="/dashboard" className="nav-item">
             <i className="fa-solid fa-house"></i> Dashboard
           </Link>
-
           <Link to="/pesanan" className="nav-item active">
             <i className="fa-solid fa-box"></i> Pesanan
           </Link>
-
           <Link to="/persetujuan" className="nav-item">
             <i className="fa-solid fa-circle-check"></i> Persetujuan
           </Link>
-
           <Link to="/produksi" className="nav-item">
             <i className="fa-solid fa-gear"></i> Produksi
           </Link>
-
           <Link to="/pengiriman" className="nav-item">
             <i className="fa-solid fa-truck"></i> Pengiriman
           </Link>
-
           <Link to="/transaksi" className="nav-item">
             <i className="fa-solid fa-money-bill-wave"></i> Transaksi
           </Link>
         </nav>
 
-        {/* TOMBOL KELUAR (Sudah ditambahkan di sini) */}
         <Link to="/login" className="btn-keluar">Keluar</Link>
-
       </div>
 
-      {/* MAIN CONTENT */}
+      {/* MAIN CONTENT AREA */}
       <div className="main-content">
-
-        <div className="topbar">
+        
+        {/* TOPBAR - 🌟 SAKLAR GARIS TIGA SUDAH DIHAPUS TOTAL DI SINI */}
+        <div className="topbar" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "24px" }}>
           <div className="topbar-left">
-            <i className="fa-solid fa-bars"></i> {/* Menambahkan icon bars biar serasi sama dashboard */}
-            <h2>Daftar Pesanan</h2>
+            {/* Tombol i className="fa-solid fa-bars" sudah dihapus aman */}
+            <h2 style={{ margin: 0 }}>Pesanan</h2>
+          </div>
+          <div className="topbar-right" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <i className="fa-regular fa-bell" style={{ fontSize: "18px", color: "#64748b", cursor: "pointer" }}></i>
+            <span className="admin-email" style={{ color: "#64748b", fontSize: "14px" }}>admin@gmail.com</span>
+            <i className="fa-regular fa-circle-user" style={{ fontSize: "24px", color: "#475569" }}></i>
           </div>
         </div>
 
-        {/* FILTER BAR */}
-        <div className="filter-bar">
+        {/* FILTER BAR ATAS */}
+        <div className="filter-bar" style={{ marginBottom: "24px" }}>
           <div className="filter-search">
-            <input
-              type="text"
-              placeholder="Cari Pesanan"
-            />
+            <input type="text" placeholder="Cari Pesanan" />
           </div>
 
           <div className="filter-select">
             <select>
               <option>Semua</option>
-              <option>Proses</option>
               <option>Baru</option>
+              <option>Proses</option>
               <option>Selesai</option>
               <option>Revisi</option>
             </select>
@@ -81,16 +77,14 @@ function Pesanan() {
           </div>
         </div>
 
-        {/* TABLE CARD */}
+        {/* TABEL DATA PESANAN */}
         <div className="table-card">
-
           <table className="pesanan-table">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Dokter</th>
                 <th>Pesanan</th>
-                <th>Tanggal</th>
                 <th>Status</th>
                 <th>Aksi</th>
               </tr>
@@ -100,53 +94,47 @@ function Pesanan() {
               <tr>
                 <td>PSN001</td>
                 <td>drg. Budi Santoso</td>
-                <td>Crown Zirconia</td>
-                <td>23 April 2026</td>
+                <td>Crown Zirconia .M. Putih</td>
+                <td><span className="badge badge-proses">Proses</span></td>
                 <td>
-                  <span className="badge badge-proses">Proses</span>
+                  <Link to="/pesanan/PSN001" className="link-detail">Detail</Link>
                 </td>
-                <td>Detail</td>
               </tr>
 
               <tr>
                 <td>PSN002</td>
                 <td>drg. Anita Rahayu</td>
-                <td>Veneer Porselen</td>
-                <td>22 April 2026</td>
+                <td>Veneer Porselen .S. Cream</td>
+                <td><span className="badge badge-baru">Baru</span></td>
                 <td>
-                  <span className="badge badge-selesai">Selesai</span>
+                  <Link to="/pesanan/PSN002" className="link-detail">Detail</Link>
                 </td>
-                <td>Detail</td>
               </tr>
 
               <tr>
                 <td>PSN003</td>
                 <td>drg. Dian Wulandari</td>
-                <td>Gigi Tiruan</td>
-                <td>22 April 2026</td>
+                <td>Gigi Tiruan Full .L. Natural</td>
+                <td><span className="badge badge-selesai">Selesai</span></td>
                 <td>
-                  <span className="badge badge-baru">Baru</span>
+                  <Link to="/pesanan/PSN003" className="link-detail">Detail</Link>
                 </td>
-                <td>Detail</td>
               </tr>
 
               <tr>
                 <td>PSN004</td>
                 <td>drg. Hendra Setiawan</td>
-                <td>Bridge Porselen</td>
-                <td>21 April 2026</td>
+                <td>Bridge Porselen .M. Putih</td>
+                <td><span className="badge badge-revisi">Revisi</span></td>
                 <td>
-                  <span className="badge badge-revisi">Revisi</span>
+                  <Link to="/pesanan/PSN004" className="link-detail">Detail</Link>
                 </td>
-                <td>Detail</td>
               </tr>
             </tbody>
           </table>
-
         </div>
 
       </div>
-
     </div>
   );
 }

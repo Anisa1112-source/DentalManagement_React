@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../style/Style.css";
+import "../style/pesananDokter.css";
 
 function DokterPesananList() {
   const navigate = useNavigate();

@@ -1,0 +1,53 @@
+/* Container Utama */
+.table-card-dokter {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px; /* Ruang lebih lega */
+    border: 1px solid #d1e7f7;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Tabel Anti-Mencong */
+.table-pesanan-dokter, .table-pengiriman-dokter {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* KUNCI UTAMA: Lebar kolom tidak akan berubah */
+}
+
+/* Lebar Kolom Tetap - Sesuai Jumlah Kolom */
+/* Halaman Pesanan (5 kolom) */
+.table-pesanan-dokter th:nth-child(1), .table-pesanan-dokter td:nth-child(1) { width: 10%; }
+.table-pesanan-dokter th:nth-child(2), .table-pesanan-dokter td:nth-child(2) { width: 35%; }
+.table-pesanan-dokter th:nth-child(3), .table-pesanan-dokter td:nth-child(3) { width: 25%; }
+.table-pesanan-dokter th:nth-child(4), .table-pesanan-dokter td:nth-child(4) { width: 15%; }
+.table-pesanan-dokter th:nth-child(5), .table-pesanan-dokter td:nth-child(5) { width: 15%; }
+
+/* Halaman Pengiriman (5 kolom) */
+.table-pengiriman-dokter th:nth-child(1), .table-pengiriman-dokter td:nth-child(1) { width: 10%; }
+.table-pengiriman-dokter th:nth-child(2), .table-pengiriman-dokter td:nth-child(2) { width: 30%; }
+.table-pengiriman-dokter th:nth-child(3), .table-pengiriman-dokter td:nth-child(3) { width: 25%; }
+.table-pengiriman-dokter th:nth-child(4), .table-pengiriman-dokter td:nth-child(4) { width: 20%; }
+.table-pengiriman-dokter th:nth-child(5), .table-pengiriman-dokter td:nth-child(5) { width: 15%; }
+
+/* Styling Sel (Rapi & Tidak Mepet) */
+.table-pesanan-dokter th, .table-pesanan-dokter td,
+.table-pengiriman-dokter th, .table-pengiriman-dokter td {
+    padding: 20px 15px; /* Padding lebih besar supaya tidak dempet */
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Badge (Ukuran Seragam) */
+.badge-dokter, .badge-pengiriman {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    width: 95px; /* Lebar badge dikunci supaya kolom status rata */
+}

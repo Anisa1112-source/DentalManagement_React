@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../style/style.css"; 
+import "../style/pesananAdmin.css"; // Menggunakan file CSS utama
 
 function Dashboard() {
   return (
     <div className="dashboard-container">
-
-      {/* ===== SIDEBAR ===== */}
+      
+      {/* SIDEBAR DENGAN IKON LENGKAP */}
       <div className="sidebar">
         <div className="sidebar-logo">
           <img src="/assets/Logo.png" alt="Logo" />
@@ -40,144 +40,138 @@ function Dashboard() {
         <Link to="/login" className="btn-keluar">Keluar</Link>
       </div>
 
-      {/* ===== MAIN CONTENT ===== */}
+      {/* MAIN CONTENT AREA */}
       <div className="main-content">
-
-        {/* Topbar */}
-        <div className="topbar">
+        
+        {/* TOPBAR - 🌟 SAKLAR GARIS TIGA SUDAH DIHAPUS TOTAL DI SINI */}
+        <div className="topbar" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "24px" }}>
           <div className="topbar-left">
-            <i className="fa-solid fa-bars"></i>
-            <h2>Dashboard</h2>
+            {/* Tombol i className="fa-solid fa-bars" sudah dibuang */}
+            <h2 style={{ margin: 0 }}>Dashboard</h2>
           </div>
-          <div className="topbar-right">
-            <i className="fa-regular fa-bell"></i>
-            <span>admin@gmail.com</span>
-            <div className="admin-avatar">
-              <i className="fa-regular fa-circle-user"></i>
-            </div>
+          <div className="topbar-right" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <i className="fa-regular fa-bell" style={{ fontSize: "18px", color: "#64748b", cursor: "pointer" }}></i>
+            <span className="admin-email" style={{ color: "#64748b", fontSize: "14px" }}>admin@gmail.com</span>
+            <i className="fa-regular fa-circle-user" style={{ fontSize: "24px", color: "#475569" }}></i>
           </div>
         </div>
 
-        {/* Stat Cards */}
-        <div className="stat-cards">
-          <div className="stat-card">
-            <p className="stat-label">Total Pesanan</p>
-            <h2 className="stat-number">128</h2>
-            <p className="stat-desc">Semua Pesanan</p>
+        {/* STATISTIK KARTU UTAMA (4 KOTAK ATAS) */}
+        <div className="stats-grid" style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
+          <div className="stat-card" style={{ flex: 1, background: "white", padding: "20px", borderRadius: "12px", textAlign: "center", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
+            <p style={{ margin: "0 0 10px 0", color: "#64748b", fontSize: "13px" }}>Total Pesanan</p>
+            <h1 style={{ margin: "0 0 5px 0", fontSize: "36px", color: "#1e293b" }}>128</h1>
+            <p style={{ margin: 0, color: "#94a3b8", fontSize: "12px" }}>Semua Pesanan</p>
           </div>
-          <div className="stat-card">
-            <p className="stat-label">Disetujui</p>
-            <h2 className="stat-number">100</h2>
-            <p className="stat-desc">&nbsp;</p>
+          <div className="stat-card" style={{ flex: 1, background: "white", padding: "20px", borderRadius: "12px", textAlign: "center", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
+            <p style={{ margin: "0 0 10px 0", color: "#64748b", fontSize: "13px" }}>Disetujui</p>
+            <h1 style={{ margin: "0 0 5px 0", fontSize: "36px", color: "#1e293b" }}>100</h1>
+            <p style={{ margin: 0, color: "#94a3b8", fontSize: "12px" }}>Dalam Proses Produksi</p>
           </div>
-          <div className="stat-card">
-            <p className="stat-label">Sedang Diproses</p>
-            <h2 className="stat-number">35</h2>
-            <p className="stat-desc">Dalam Proses Produksi</p>
+          <div className="stat-card" style={{ flex: 1, background: "white", padding: "20px", borderRadius: "12px", textAlign: "center", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
+            <p style={{ margin: "0 0 10px 0", color: "#64748b", fontSize: "13px" }}>Sedang Diproses</p>
+            <h1 style={{ margin: "0 0 5px 0", fontSize: "36px", color: "#1e293b" }}>35</h1>
+            <p style={{ margin: 0, color: "#94a3b8", fontSize: "12px" }}>Dalam Proses Produksi</p>
           </div>
-          <div className="stat-card">
-            <p className="stat-label">Pengiriman</p>
-            <h2 className="stat-number">15</h2>
-            <p className="stat-desc">Dalam Pengiriman</p>
+          <div className="stat-card" style={{ flex: 1, background: "white", padding: "20px", borderRadius: "12px", textAlign: "center", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
+            <p style={{ margin: "0 0 10px 0", color: "#64748b", fontSize: "13px" }}>Pengiriman</p>
+            <h1 style={{ margin: "0 0 5px 0", fontSize: "36px", color: "#1e293b" }}>15</h1>
+            <p style={{ margin: 0, color: "#94a3b8", fontSize: "12px" }}>Dalam Pengiriman</p>
           </div>
         </div>
 
-        {/* Bottom Grid (Ini bagian bawah figma kamu yang sempat hilang) */}
-        <div className="bottom-grid">
-
-          {/* Pesanan Terbaru */}
-          <div className="card pesanan-card">
-            <div className="card-header">
-              <h3>Pesanan Terbaru</h3>
-              <a href="#lihat-semua">Lihat Semua</a>
+        {/* LAYOUT KONTEN BAWAH (BAGI DUA KOLOM) */}
+        <div className="dashboard-content-layout" style={{ display: "flex", gap: "24px" }}>
+          
+          {/* SEKSI KIRI: PESANAN TERBARU */}
+          <div className="table-card" style={{ flex: 1.5, background: "white", padding: "24px", borderRadius: "12px" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
+              <h3 style={{ margin: 0, color: "#1e293b" }}>Pesanan Terbaru</h3>
+              <Link to="/pesanan" style={{ fontSize: "13px", color: "#2382d4", fontWeight: "600", textDecoration: "none" }}>Lihat Semua</Link>
             </div>
 
-            <div className="pesanan-item">
-              <div className="pesanan-info">
-                <p className="drg-name">drg. Budi Santoso</p>
-                <p className="drg-sub">Crown Zirconia - Klinik Sehat</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 20px", background: "#eef7ff", borderRadius: "8px" }}>
+                <div>
+                  <h4 style={{ margin: "0 0 4px 0", color: "#1e293b", fontSize: "14px" }}>drg. Budi Santoso</h4>
+                  <p style={{ margin: 0, color: "#64748b", fontSize: "12px" }}>Crown Zirconia - Klinik Sehat</p>
+                </div>
+                <span className="badge badge-proses">Proses</span>
               </div>
-              <span className="badge badge-proses">Proses</span>
-            </div>
 
-            <div className="pesanan-item">
-              <div className="pesanan-info">
-                <p className="drg-name">drg. Anita Rahayu</p>
-                <p className="drg-sub">Veneer Porselen - RS Kartini</p>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 20px", background: "#eef7ff", borderRadius: "8px" }}>
+                <div>
+                  <h4 style={{ margin: "0 0 4px 0", color: "#1e293b", fontSize: "14px" }}>drg. Anita Rahayu</h4>
+                  <p style={{ margin: 0, color: "#64748b", fontSize: "12px" }}>Veneer Porselen - RS Kartini</p>
+                </div>
+                <span className="badge badge-baru">Baru</span>
               </div>
-              <span className="badge badge-baru">Baru</span>
-            </div>
 
-            <div className="pesanan-item">
-              <div className="pesanan-info">
-                <p className="drg-name">drg. Dian Wulandari</p>
-                <p className="drg-sub">Gigi Tiruan - Klinik Prima</p>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 20px", background: "#eef7ff", borderRadius: "8px" }}>
+                <div>
+                  <h4 style={{ margin: "0 0 4px 0", color: "#1e293b", fontSize: "14px" }}>drg. Dian Wulandari</h4>
+                  <p style={{ margin: 0, color: "#64748b", fontSize: "12px" }}>Gigi Tiruan - Klinik Prima</p>
+                </div>
+                <span className="badge badge-selesai">Selesai</span>
               </div>
-              <span className="badge badge-selesai">Selesai</span>
-            </div>
 
-            <div className="pesanan-item">
-              <div className="pesanan-info">
-                <p className="drg-name">drg. Hendra Setiawan</p>
-                <p className="drg-sub">Bridge Porselen - RS Medika</p>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 20px", background: "#eef7ff", borderRadius: "8px" }}>
+                <div>
+                  <h4 style={{ margin: "0 0 4px 0", color: "#1e293b", fontSize: "14px" }}>drg. Hendra Setiawan</h4>
+                  <p style={{ margin: 0, color: "#64748b", fontSize: "12px" }}>Bridge Porselen - RS Medika</p>
+                </div>
+                <span className="badge badge-revisi">Revisi</span>
               </div>
-              <span className="badge badge-revisi">Revisi</span>
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="right-col">
-
-            {/* Status Produksi */}
-            <div className="card">
-              <h3 className="card-title">Status produksi</h3>
-              <div className="produksi-item">
-                <span className="produksi-label">Crown</span>
-                <span className="produksi-pct">78%</span>
-              </div>
-              <div className="produksi-item">
-                <span className="produksi-label">Veneer</span>
-                <span className="produksi-pct">62%</span>
-              </div>
-              <div className="produksi-item">
-                <span className="produksi-label">Bridge</span>
-                <span className="produksi-pct">45%</span>
-              </div>
-              <div className="produksi-item">
-                <span className="produksi-label">Gigi Tiruan</span>
-                <span className="produksi-pct">30%</span>
+          {/* SEKSI KANAN: STATUS PRODUKSI & JADWAL */}
+          <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "24px" }}>
+            
+            {/* CARD STATUS PRODUKSI */}
+            <div className="table-card" style={{ background: "white", padding: "24px", borderRadius: "12px" }}>
+              <h3 style={{ margin: "0 0 20px 0", color: "#1e293b" }}>Status produksi</h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "16px", fontSize: "14px", color: "#475569" }}>
+                <div style={{ display: "flex", justifyContent: "space-between" }}><span>Crown</span><strong>78%</strong></div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}><span>Veneer</span><strong>62%</strong></div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}><span>Bridge</span><strong>45%</strong></div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}><span>Gigi Tiruan</span><strong>30%</strong></div>
               </div>
             </div>
 
-            {/* Jadwal Hari Ini */}
-            <div className="card">
-              <h3 className="card-title">Jadwal hari ini</h3>
-              <div className="jadwal-item">
-                <span className="jadwal-time">08.00</span>
-                <div className="jadwal-info">
-                  <p className="jadwal-title">Crown</p>
-                  <p className="jadwal-sub">drg. Budi Santoso</p>
+            {/* CARD JADWAL HARI INI */}
+            <div className="table-card" style={{ background: "white", padding: "24px", borderRadius: "12px" }}>
+              <h3 style={{ margin: "0 0 20px 0", color: "#1e293b", textAlign: "center" }}>Jadwal hari ini</h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                <div style={{ display: "flex", gap: "15px", alignItems: "center", padding: "12px 16px", background: "#e0f2fe", borderRadius: "8px" }}>
+                  <strong style={{ fontSize: "14px", color: "#0f172a" }}>08.00</strong>
+                  <div>
+                    <h5 style={{ margin: "0 0 2px 0", fontSize: "13px" }}>Crown</h5>
+                    <p style={{ margin: 0, fontSize: "11px", color: "#475569" }}>drg. Budi Santoso</p>
+                  </div>
                 </div>
-              </div>
-              <div className="jadwal-item">
-                <span className="jadwal-time">10.30</span>
-                <div className="jadwal-info">
-                  <p className="jadwal-title">Veneer</p>
-                  <p className="jadwal-sub">drg. Anita Rahayu</p>
+                <div style={{ display: "flex", gap: "15px", alignItems: "center", padding: "12px 16px", background: "#e0f2fe", borderRadius: "8px" }}>
+                  <strong style={{ fontSize: "14px", color: "#0f172a" }}>10.30</strong>
+                  <div>
+                    <h5 style={{ margin: "0 0 2px 0", fontSize: "13px" }}>Veneer</h5>
+                    <p style={{ margin: 0, fontSize: "11px", color: "#475569" }}>drg. Anita Rahayu</p>
+                  </div>
                 </div>
-              </div>
-              <div className="jadwal-item">
-                <span className="jadwal-time">13.00</span>
-                <div className="jadwal-info">
-                  <p className="jadwal-title">Bridge</p>
-                  <p className="jadwal-sub">drg. Hendra Setiawan</p>
+                <div style={{ display: "flex", gap: "15px", alignItems: "center", padding: "12px 16px", background: "#e0f2fe", borderRadius: "8px" }}>
+                  <strong style={{ fontSize: "14px", color: "#0f172a" }}>13.00</strong>
+                  <div>
+                    <h5 style={{ margin: "0 0 2px 0", fontSize: "13px" }}>Bridge</h5>
+                    <p style={{ margin: 0, fontSize: "11px", color: "#475569" }}>drg. Hendra Setiawan</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-          </div> {/* Akhir Right Column */}
-        </div> {/* Akhir Bottom Grid */}
-      </div> {/* Akhir Main Content */}
+          </div>
+
+        </div>
+
+      </div>
     </div>
   );
 }

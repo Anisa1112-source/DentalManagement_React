@@ -14,8 +14,9 @@ function SidebarDokter() {
         <Link to="/dokter/dashboard" className={`nav-item ${location.pathname === '/dokter/dashboard' ? 'active' : ''}`}>
           <i className="fa-solid fa-house"></i> Dashboard
         </Link>
+        {/* TEKS SUDAH DIUBAH MENJADI PESANAN */}
         <Link to="/dokter/pesanan" className={`nav-item ${location.pathname === '/dokter/pesanan' ? 'active' : ''}`}>
-          <i className="fa-solid fa-file-invoice"></i> Pesanan Saya
+          <i className="fa-solid fa-file-invoice"></i> Pesanan
         </Link>
         <Link to="/dokter/pengiriman" className={`nav-item ${location.pathname === '/dokter/pengiriman' ? 'active' : ''}`}>
           <i className="fa-solid fa-truck"></i> Pengiriman
