@@ -1,198 +1,225 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+/* ================= GLOBAL FONT & RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:#f5f5f5;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #EAF6FF;
+    color: #222;
 }
 
-/* ========= LOGIN ========== */
-
-.login-container{
-    width:100%;
-    height:100vh;
-    display:flex;
+/* Semua tulisan otomatis menggunakan font Poppins */
+h1, h2, h3, h4, h5, h6,
+p, span, a, button, input,
+select, table, th, td, div {
+    font-family: 'Poppins', sans-serif;
 }
 
-.left-panel{
-    width:45%;
-    background:#3498db;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+/* ========= LOGIN SPLIT-SCREEN (FRAME 1 FIGMA) ========== */
+.login-split-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.logo-section{ text-align:center; }
-
-.logo-section img{
-    width:120px;
-    margin-bottom:20px;
+.login-left-brand {
+    width: 45%;
+    background: #3498db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    text-align: center;
 }
 
-.logo-section h1{
-    color:white;
-    font-size:55px;
-    font-weight:bold;
+.login-left-brand h1 {
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0;
 }
 
-.logo-section h2{
-    color:#001a8d;
-    font-size:40px;
-    font-weight:bold;
+.login-left-brand h2 {
+    color: #001a8d;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
 }
 
-.logo-section p{
-    margin-top:30px;
-    color:white;
-    font-size:18px;
+.login-left-brand p {
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+    max-width: 340px;
+    line-height: 1.5;
 }
 
-.right-panel{
-    width:55%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#fafafa;
+.login-right-form {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    padding: 40px;
 }
 
-.login-box{
-    width:400px;
-    padding:35px;
-    background:white;
-    border-radius:15px;
-    border:1px solid #ddd;
+.login-form-box {
+    width: 400px;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
 
-.login-box h3{
-    text-align:center;
-    margin-bottom:15px;
+.login-form-box h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #222;
 }
 
-.avatar{
-    text-align:center;
-    font-size:60px;
-    color:gray;
-    margin-bottom:20px;
+.avatar {
+    text-align: center;
+    font-size: 60px;
+    color: gray;
+    margin-bottom: 20px;
 }
 
-.form-group{ margin-bottom:15px; }
-
-.form-group label{
-    display:block;
-    margin-bottom:5px;
+.form-group { 
+    margin-bottom: 15px; 
 }
 
-.form-group input{
-    width:100%;
-    padding:14px;
-    border:none;
-    background:#e8e8e8;
-    border-radius:8px;
-    box-shadow:0 3px 5px rgba(0,0,0,0.2);
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.option{
-    display:flex;
-    justify-content:space-between;
-    margin:10px 0 20px;
-    font-size:13px;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #e8e8e8;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    font-size: 14px;
+    outline: none;
 }
 
-.btn{
-    width:100%;
-    padding:14px;
-    border:none;
-    background:#3498db;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px;
+    font-size: 13px;
 }
 
-.register-link{
-    text-align:center;
-    margin-top:15px;
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 /* ============ REGISTER ============ */
-
-.register-page{
-    min-height:100vh;
-    padding:30px;
+.register-page {
+    min-height: 100vh;
+    padding: 30px;
 }
 
-.header{ text-align:center; }
+.header { text-align: center; }
+.header img { width: 110px; }
 
-.header img{ width:110px; }
-
-.header h1{
-    color:#3498db;
-    font-size:60px;
+.header h1 {
+    color: #3498db;
+    font-size: 60px;
+    font-weight: bold;
 }
 
-.header h2{
-    color:#001a8d;
-    font-size:40px;
+.header h2 {
+    color: #001a8d;
+    font-size: 40px;
+    font-weight: bold;
 }
 
-.subtitle{
-    margin-top:15px;
-    font-weight:500;
+.subtitle {
+    margin-top: 15px;
+    font-weight: 500;
 }
 
-.register-box{
-    max-width:1100px;
-    margin:30px auto;
-    background:white;
-    border:1px solid #ddd;
-    border-radius:15px;
-    padding:40px;
+.register-box {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 40px;
 }
 
-.form-register{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+.form-register {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-.input-group{ margin-bottom:20px; }
+.input-group { margin-bottom: 20px; }
 
-.input-group label{
-    display:block;
-    margin-bottom:6px;
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
 }
 
 .input-group input,
-.input-group textarea{
-    width:100%;
-    padding:15px;
-    border:none;
-    background:#e8e8e8;
-    border-radius:8px;
-    box-shadow:0 3px 5px rgba(0,0,0,0.2);
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #e8e8e8;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
-textarea{
-    height:180px;
-    resize:none;
+textarea {
+    height: 180px;
+    resize: none;
 }
 
-.register-btn{
-    width:400px;
-    margin:auto;
-    display:block;
+.register-btn {
+    width: 400px;
+    margin: auto;
+    display: block;
 }
 
-.login-link{
-    text-align:center;
-    margin-top:15px;
+.login-link {
+    text-align: center;
+    margin-top: 15px;
 }
 
-
-
+/* ============ CORE CORE DASHBOARD CONTAINER ============ */
 .dashboard-container {
   display: flex;
   height: 100vh;
@@ -278,7 +305,7 @@ textarea{
   display: block;
 }
 
-/* ---- MAIN ---- */
+/* ---- MAIN AREA ---- */
 .main-content {
   flex: 1;
   display: flex;
@@ -406,7 +433,6 @@ textarea{
   font-weight: 500;
 }
 
-
 .pesanan-item {
   display: flex;
   justify-content: space-between;
@@ -416,7 +442,6 @@ textarea{
   padding: 12px 16px;
   margin-bottom: 10px;
 }
-
 
 .drg-name {
   font-size: 13px;
@@ -430,7 +455,7 @@ textarea{
   margin-top: 2px;
 }
 
-/* ---- BADGE ---- */
+/* ---- BADGES (ADMIN - Dashboard, Pesanan Admin, dll) ---- */
 .badge {
   font-size: 11px;
   font-weight: 600;
@@ -454,7 +479,7 @@ textarea{
   gap: 16px;
 }
 
-/* ---- STATUS PRODUKSI (Dashboard) ---- */
+/* ---- STATUS PRODUKSI ---- */
 .produksi-item {
   display: flex;
   justify-content: space-between;
@@ -507,8 +532,7 @@ textarea{
   margin-top: 2px;
 }
 
-/* ================= HALAMAN PESANAN ================= */
-
+/* ================= HALAMAN PESANAN (ADMIN) ================= */
 .filter-bar {
   display: flex;
   gap: 14px;
@@ -520,7 +544,6 @@ textarea{
   border-radius: 8px;
   border: 1.5px solid #dde3ee;
   font-size: 13px;
-  font-family: 'Poppins', sans-serif;
   background: white;
   width: 220px;
   outline: none;
@@ -532,7 +555,6 @@ textarea{
   border-radius: 8px;
   border: 1.5px solid #dde3ee;
   font-size: 13px;
-  font-family: 'Poppins', sans-serif;
   background: white;
   outline: none;
   color: #333;
@@ -613,210 +635,180 @@ textarea{
 
 .aksi-link:hover { text-decoration: underline; }
 
-/* ================= GLOBAL FONT ================= */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
-    background: #EAF6FF;
-    color: #222;
-}
-
-/* semua tulisan otomatis sama kayak dashboard */
-h1,h2,h3,h4,h5,h6,
-p,span,a,button,input,
-select,table,th,td,div{
-    font-family: 'Poppins', sans-serif;
-}
-
 /* =========================================
    PERSETUJUAN
 ========================================= */
-
-.approval-text{
-  margin:20px 35px;
-  font-size:13px;
-  font-weight:500;
-  color:#676060;
-  line-height:1.6;
+.approval-text {
+  margin: 20px 35px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #676060;
+  line-height: 1.6;
 }
 
-.approval-text span{
-  color:#001f8f;
-  font-weight:600;
+.approval-text span {
+  color: #001f8f;
+  font-weight: 600;
 }
 
-.approval-wrapper{
-  width:82%;
-  margin:auto;
-  background:#D7F0FF;
-  border-radius:12px;
-  padding:24px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+.approval-wrapper {
+  width: 82%;
+  margin: auto;
+  background: #D7F0FF;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.approval-card{
-  background:white;
-  border-radius:12px;
-  padding:18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:20px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+.approval-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.red-card{
-  background:#ff7f88;
+.red-card { background: #ff7f88; }
+.green-card { background: #c8efc6; }
+
+.approval-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-.green-card{
-  background:#c8efc6;
+.approval-icon {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3498db;
+  font-size: 18px;
 }
 
-.approval-left{
-  display:flex;
-  align-items:center;
-  gap:18px;
+.approval-info h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 3px;
 }
 
-.approval-icon{
-  width:42px;
-  height:42px;
-  border:2px solid #3498db;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:#3498db;
-  font-size:18px;
+.approval-info p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.6;
 }
 
-.approval-info h3{
-  font-size:13px;
-  font-weight:600;
-  color:#222;
-  margin-bottom:3px;
+.approval-info small {
+  font-size: 13px;
+  font-weight: 500;
+  color: #676060;
+  line-height: 1.6;
 }
 
-.approval-info p{
-  font-size:13px;
-  font-weight:500;
-  color:#222;
-  line-height:1.6;
+.approval-action {
+  display: flex;
+  gap: 14px;
 }
 
-.approval-info small{
-  font-size:13px;
-  font-weight:500;
-  color:#676060;
-  line-height:1.6;
+.btn-approve {
+  background: #17d317;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.approval-action{
-  display:flex;
-  gap:14px;
+.btn-reject {
+  background: #ff5f70;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
 }
-
-.btn-approve{
-  background:#17d317;
-  color:white;
-  border:none;
-  border-radius:20px;
-  padding:8px 24px;
-  font-size:12px;
-  font-weight:500;
-  cursor:pointer;
-}
-
-.btn-reject{
-  background:#ff5f70;
-  color:white;
-  border:none;
-  border-radius:20px;
-  padding:8px 24px;
-  font-size:12px;
-  font-weight:500;
-  cursor:pointer;
-}
-
 
 /* =========================================
    PRODUKSI
 ========================================= */
-
-.production-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  padding:25px;
+.production-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 25px;
 }
 
-.production-column h3{
-  margin-bottom:14px;
-  font-size:13px;
-  font-weight:600;
-  color:#222;
+.production-column h3 {
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
 }
 
-.production-card{
-  background:white;
-  border-radius:12px;
-  padding:16px;
-  min-height:165px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+.production-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 165px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.production-card h4{
-  font-size:13px;
-  font-weight:600;
-  color:#676060;
-  margin-bottom:10px;
+.production-card h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #676060;
+  margin-bottom: 10px;
 }
 
-.production-card p{
-  font-size:13px;
-  font-weight:600;
-  color:#222;
-  line-height:1.6;
-  margin-bottom:10px;
+.production-card p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-.production-card small{
-  display:block;
-  font-size:13px;
-  font-weight:500;
-  color:#676060;
-  line-height:1.6;
-  margin-bottom:10px;
+.production-card small {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #676060;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-.warning-btn{
-  background:#ffd3d3;
-  color:red;
-  border:none;
-  border-radius:10px;
-  padding:7px 12px;
-  font-size:12px;
-  font-weight:500;
+.warning-btn {
+  background: #ffd3d3;
+  color: red;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.done-btn{
-  background:#c8efc6;
-  color:green;
-  border:none;
-  border-radius:10px;
-  padding:7px 12px;
-  font-size:12px;
-  font-weight:500;
+.done-btn {
+  background: #c8efc6;
+  color: green;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
-/* ================= PENGIRIMAN ================= */
-
+/* ================= PENGIRIMAN (ADMIN) ================= */
 .shipping-top {
   display: flex;
   gap: 14px;
@@ -879,119 +871,432 @@ select,table,th,td,div{
   font-size: 13px;
 }
 
+/* Penanda Warna Status Utama */
 .yellow-status { color: #b8960a; font-weight: 600; }
 .red-status    { color: #cc0000; font-weight: 600; }
 .green-status  { color: #1a7a18; font-weight: 600; }
 
-/* ========================= */
-/* TRANSAKSI */
-/* ========================= */
-
-.transaksi-filter{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    margin:30px 0;
+/* Menjadikan teks status tabel interaktif & bisa diklik */
+.status-clickable {
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
-.search-transaksi{
-    width:260px;
-    height:45px;
-    border:none;
-    border-radius:12px;
-    padding:0 15px;
-    background:white;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
-    outline:none;
+.status-disabled {
+    font-weight: 600;
+    cursor: default;
 }
 
-.filter-status{
-    width:110px;
-    height:45px;
-    border:none;
-    border-radius:12px;
-    padding:0 10px;
-    background:white;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
-    outline:none;
+/* ================= TRANSAKSI (ADMIN) ================= */
+.transaksi-filter {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 30px 0;
 }
 
-.filter-bulan{
-    width:150px;
-    height:45px;
-    background:white;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
+.search-transaksi {
+    width: 260px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 15px;
+    background: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    outline: none;
 }
 
-.download-btn{
-    width:150px;
-    height:45px;
-    border:none;
-    border-radius:12px;
-    background:white;
-    cursor:pointer;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
-    font-weight:500;
+.filter-status {
+    width: 110px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 10px;
+    background: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    outline: none;
 }
 
-.transaksi-card{
-    background:#d7edf9;
-    border-radius:15px;
-    padding:25px;
-    border:1px solid #7d9fb3;
+.filter-bulan {
+    width: 150px;
+    height: 45px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
 }
 
-.transaksi-table{
-    width:100%;
-    border-collapse:collapse;
+.download-btn {
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    font-weight: 500;
 }
 
-.transaksi-table th{
-    text-align:left;
-    padding:15px;
-    border-bottom:1px solid #888;
-    font-size:14px;
+.transaksi-card {
+    background: #d7edf9;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #7d9fb3;
 }
 
-.transaksi-table td{
-    padding:18px 15px;
-    border-bottom:1px solid #999;
-    font-size:14px;
+.transaksi-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.harga{
-    color:#2196f3;
-    font-weight:600;
+.transaksi-table th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #888;
+    font-size: 14px;
 }
 
-.status-lunas{
-    background:#a5e6aa;
-    color:#1d7b28;
-    padding:4px 18px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:600;
+.transaksi-table td {
+    padding: 18px 15px;
+    border-bottom: 1px solid #999;
+    font-size: 14px;
 }
 
-.status-belum{
-    background:#ff8d8d;
-    color:#b60000;
-    padding:4px 18px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:600;
+.harga {
+    color: #2196f3;
+    font-weight: 600;
 }
 
-.status-warning{
-    background:#ffe680;
-    color:#9c7700;
-    padding:4px 18px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:600;
+.status-lunas {
+    background: #a5e6aa;
+    color: #1d7b28;
+    padding: 4px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
 }
+
+.status-belum {
+    background: #ff8d8d;
+    color: #b60000;
+    padding: 4px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-warning {
+    background: #ffe680;
+    color: #9c7700;
+    padding: 4px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ================= POP-UP MODAL ENGINE ================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    width: 420px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    animation: zoomInEffect 0.25s ease-out;
+}
+
+.modal-header {
+    background: #3498db;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+
+.modal-body {
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.modal-body h2 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.modal-footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-modal-cancel {
+    padding: 11px 26px;
+    background: #cbd5e0;
+    color: #4a5568;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-modal-confirm {
+    padding: 11px 26px;
+    background: #c6f6d5;
+    color: #22543d;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes zoomInEffect {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================
+   KHUSUS PANEL DOKTER — PESANAN LIST & DETAIL
+   Class diberi suffix "-dokter" agar tidak bentrok
+   dengan .filter-bar / .table-card / .badge milik ADMIN
+   ========================================== */
+
+.filter-bar-dokter {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.input-search-dokter {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+}
+
+.select-filter-dokter {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  background: white;
+  min-width: 150px;
+  color: #475569;
+}
+
+.table-card-dokter {
+  background: #cfe9fb;
+  border-radius: 14px;
+  padding: 22px;
+  border: none;
+  box-shadow: none;
+}
+
+.table-pesanan-dokter {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-pesanan-dokter thead th {
+  text-align: left;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+  padding: 8px 10px;
+}
+
+.table-pesanan-dokter tbody td {
+  padding: 16px 10px;
+  font-size: 14px;
+  color: #1c1c1c;
+  border-top: 1px solid #9cc6e8;
+}
+
+.table-pesanan-dokter .td-id {
+  font-weight: 700;
+  color: #1a5694;
+}
+
+.link-detail-dokter {
+  background: none;
+  border: none;
+  color: #1d6fd1;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* ---- BADGE STATUS DOKTER (beda dari .badge admin) ---- */
+.badge-dokter {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 14px;
+}
+
+.badge-dokter-proses    { background: #ffe69c; color: #7a5d00; }
+.badge-dokter-selesai   { background: #bdf0c5; color: #1c7a34; }
+.badge-dokter-menunggu  { background: #ffc9c9; color: #a31d1d; }
+.badge-dokter-revisi    { background: #d8cdf5; color: #5b3aa8; }
+.badge-dokter-default   { background: #e2e8f0; color: #475569; }
+
+/* ---- DETAIL PESANAN DOKTER ---- */
+.link-kembali-dokter {
+  background: none;
+  border: none;
+  color: #1d6fd1;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-header-row-dokter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.detail-id-title-dokter {
+  margin: 0;
+  color: #1d6fd1;
+  font-size: 18px;
+}
+
+.btn-ajukan-revisi-dokter {
+  background: #e0273f;
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.detail-grid-top-dokter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.detail-grid-bottom-dokter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detail-card-dokter {
+  background: #cfe9fb;
+  border-radius: 14px;
+  padding: 22px;
+  border: none;
+  box-shadow: none;
+}
+
+.detail-card-header-dokter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.detail-card-title-dokter {
+  margin: 0 0 16px 0;
+  color: #1d6fd1;
+  font-size: 15px;
+}
+
+.detail-card-header-dokter .detail-card-title-dokter {
+  margin-bottom: 0;
+}
+
+.info-row-dokter {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.info-label-dokter {
+  font-size: 12.5px;
+  color: #5a6b7a;
+}
+
+.info-value-dokter {
+  font-size: 14.5px;
+  color: #1c1c1c;
+  font-weight: 500;
+}
+
+/* ---- TIMELINE RIWAYAT PENGIRIMAN DOKTER ---- */
+.timeline-dokter {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.timeline-item-dokter {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.timeline-dot-dokter {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: #1d6fd1;
+  flex-shrink: 0;
+}
+
+.timeline-dot-dokter.pending { background: #b9c4cd; }
+
+.timeline-label-dokter {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin: 0;
+}
+
+.timeline-label-dokter.pending { color: #9aa6af; }
+
+.timeline-date-dokter {
+  font-size: 12.5px;
+  color: #7a8a96;
+  margin-top: 2px;
+}
+

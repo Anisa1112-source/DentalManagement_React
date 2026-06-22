@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/style.css";
+import "../style/style.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -10,18 +10,26 @@ function Login() {
   const navigate = useNavigate();
 
   const cekLogin = () => {
-    const akunDummy = {
+    // DATA DUMMY AKUN SESUAI DENGAN USER FIGMA
+    const akunAdmin = {
       email: "admin@gmail.com",
       password: "admin123",
     };
 
-    if (
-      email === akunDummy.email &&
-      password === akunDummy.password
-    ) {
-      navigate("/dashboard");
+    const akunDokter = {
+      email: "dokerheri@gmail.com",
+      password: "dokter123", // Password bebas disesuaikan
+    };
+
+    // LOGIKA PENGECEKAN ROLE BERDASARKAN EMAIL
+    if (email === akunAdmin.email && password === akunAdmin.password) {
+      setError(false);
+      navigate("/dashboard"); // Masuk ke Dashboard Admin Lab
+    } else if (email === akunDokter.email && password === akunDokter.password) {
+      setError(false);
+      navigate("/dokter/dashboard"); // Masuk ke Dashboard Dokter Gigi
     } else {
-      setError(true);
+      setError(true); // Jika email atau password tidak cocok, munculkan error
     }
   };
 
@@ -33,16 +41,15 @@ function Login() {
 
   return (
     <div className="login-container">
+      {/* PANEL SEBELAH KIRI (LOGO DAN BRANDING) */}
       <div className="left-panel">
         <div className="logo-section">
           <img
             src="/assets/Logo.png"
             alt="Logo Dental"
           />
-
           <h1>DENTAL</h1>
           <h2>MANAGEMENT SYSTEM</h2>
-
           <p>
             Silakan Masuk Untuk Melanjutkan
             <br />
@@ -51,6 +58,7 @@ function Login() {
         </div>
       </div>
 
+      {/* PANEL SEBELAH KANAN (FORM INPUT LOGIN) */}
       <div className="right-panel">
         <div className="login-box">
           <div className="avatar">
@@ -66,6 +74,7 @@ function Login() {
                 fontSize: "12px",
                 textAlign: "center",
                 marginBottom: "8px",
+                fontWeight: "bold"
               }}
             >
               Email atau password salah!
@@ -74,10 +83,9 @@ function Login() {
 
           <div className="form-group">
             <label>Email</label>
-
             <input
               type="email"
-              placeholder="admin@gmail.com"
+              placeholder="Masukkan email anda"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onKeyDown={handleKeyDown}
@@ -86,7 +94,6 @@ function Login() {
 
           <div className="form-group">
             <label>Password</label>
-
             <input
               type="password"
               placeholder="••••••••"
@@ -100,10 +107,7 @@ function Login() {
             <div>
               <input type="checkbox" /> Ingat saya
             </div>
-
-            <a href="#">
-              Lupa Password?
-            </a>
+            <a href="#">Lupa Password?</a>
           </div>
 
           <button

@@ -16,32 +16,34 @@ function Pesanan() {
           </div>
         </div>
 
-        {/* 2. Mengubah semua tag <a> navigasi menjadi <Link> */}
         <nav className="sidebar-nav">
           <Link to="/dashboard" className="nav-item">
-            Dashboard
+            <i className="fa-solid fa-house"></i> Dashboard
           </Link>
 
           <Link to="/pesanan" className="nav-item active">
-            Pesanan
+            <i className="fa-solid fa-box"></i> Pesanan
           </Link>
 
           <Link to="/persetujuan" className="nav-item">
-            Persetujuan
+            <i className="fa-solid fa-circle-check"></i> Persetujuan
           </Link>
 
           <Link to="/produksi" className="nav-item">
-            Produksi
+            <i className="fa-solid fa-gear"></i> Produksi
           </Link>
 
           <Link to="/pengiriman" className="nav-item">
-            Pengiriman
+            <i className="fa-solid fa-truck"></i> Pengiriman
           </Link>
 
           <Link to="/transaksi" className="nav-item">
-            Transaksi
+            <i className="fa-solid fa-money-bill-wave"></i> Transaksi
           </Link>
         </nav>
+
+        {/* TOMBOL KELUAR (Sudah ditambahkan di sini) */}
+        <Link to="/login" className="btn-keluar">Keluar</Link>
 
       </div>
 
@@ -50,6 +52,7 @@ function Pesanan() {
 
         <div className="topbar">
           <div className="topbar-left">
+            <i className="fa-solid fa-bars"></i> {/* Menambahkan icon bars biar serasi sama dashboard */}
             <h2>Daftar Pesanan</h2>
           </div>
         </div>
