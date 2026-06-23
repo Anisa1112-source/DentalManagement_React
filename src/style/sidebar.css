@@ -1,4 +1,21 @@
-/* ---- SIDEBAR ---- */
+/* Copy kode ini ke bagian paling atas setiap file CSS kamu */
+.dashboard-container {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  background-color: #f4f7fa;
+}
+
+.main-content {
+  flex-grow: 1 !important;
+  padding: 30px !important;
+}
+
+/* Sidebar jangan diubah-ubah, pastikan lebarnya sama di semua file */
+.sidebar {
+  width: 260px !important;
+  flex-shrink: 0 !important;
+}/* ---- SIDEBAR ---- */
 .sidebar {
   width: 160px;
   min-width: 160px;

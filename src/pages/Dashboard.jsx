@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../style/pesananAdmin.css"; // Menggunakan file CSS utama
-
+import "../style/pesananAdmin.css"; 
 function Dashboard() {
   return (
     <div className="dashboard-container">
       
-      {/* SIDEBAR DENGAN IKON LENGKAP */}
+    
       <div className="sidebar">
         <div className="sidebar-logo">
           <img src="/assets/Logo.png" alt="Logo" />
@@ -35,6 +34,9 @@ function Dashboard() {
           <Link to="/transaksi" className="nav-item">
             <i className="fa-solid fa-money-bill-wave"></i> Transaksi
           </Link>
+          <Link to="/admin/profil" className="nav-item">
+            <i className="fa-regular fa-circle-user"></i> Profil Admin
+          </Link>
         </nav>
 
         <Link to="/login" className="btn-keluar">Keluar</Link>
@@ -43,20 +45,22 @@ function Dashboard() {
       {/* MAIN CONTENT AREA */}
       <div className="main-content">
         
-        {/* TOPBAR - 🌟 SAKLAR GARIS TIGA SUDAH DIHAPUS TOTAL DI SINI */}
+
         <div className="topbar" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "24px" }}>
           <div className="topbar-left">
-            {/* Tombol i className="fa-solid fa-bars" sudah dibuang */}
+      
             <h2 style={{ margin: 0 }}>Dashboard</h2>
           </div>
           <div className="topbar-right" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <i className="fa-regular fa-bell" style={{ fontSize: "18px", color: "#64748b", cursor: "pointer" }}></i>
-            <span className="admin-email" style={{ color: "#64748b", fontSize: "14px" }}>admin@gmail.com</span>
-            <i className="fa-regular fa-circle-user" style={{ fontSize: "24px", color: "#475569" }}></i>
+            <Link to="/admin/profil" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
+              <span className="admin-email" style={{ color: "#64748b", fontSize: "14px" }}>admin@gmail.com</span>
+              <i className="fa-regular fa-circle-user" style={{ fontSize: "24px", color: "#475569" }}></i>
+            </Link>
           </div>
         </div>
 
-        {/* STATISTIK KARTU UTAMA (4 KOTAK ATAS) */}
+     
         <div className="stats-grid" style={{ display: "flex", gap: "20px", marginBottom: "30px" }}>
           <div className="stat-card" style={{ flex: 1, background: "white", padding: "20px", borderRadius: "12px", textAlign: "center", boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
             <p style={{ margin: "0 0 10px 0", color: "#64748b", fontSize: "13px" }}>Total Pesanan</p>
@@ -80,10 +84,10 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* LAYOUT KONTEN BAWAH (BAGI DUA KOLOM) */}
+    
         <div className="dashboard-content-layout" style={{ display: "flex", gap: "24px" }}>
           
-          {/* SEKSI KIRI: PESANAN TERBARU */}
+        
           <div className="table-card" style={{ flex: 1.5, background: "white", padding: "24px", borderRadius: "12px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
               <h3 style={{ margin: 0, color: "#1e293b" }}>Pesanan Terbaru</h3>

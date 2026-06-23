@@ -1,0 +1,32 @@
+/* 1. Layout Dasar */
+.pa-page { display: flex; min-height: 100vh; background-color: #f4f7fa; font-family: 'Segoe UI', sans-serif; }
+
+/* 2. Sidebar */
+.pa-sidebar { width: 240px; background-color: #3ea2eb; color: white; padding: 24px; flex-shrink: 0; display: flex; flex-direction: column; }
+.pa-sidebar-title { font-weight: bold; font-size: 16px; margin: 0; }
+.pa-sidebar-subtitle { font-size: 12px; margin: 0; opacity: 0.8; }
+.pa-sidebar-nav { flex-grow: 1; margin-top: 30px; display: flex; flex-direction: column; gap: 8px; }
+.pa-nav-item { display: flex; align-items: center; gap: 12px; color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-size: 14px; }
+.pa-nav-item:hover { background-color: rgba(255,255,255,0.1); }
+.pa-nav-item-active { background-color: #66b7f0; font-weight: 600; }
+.pa-btn-keluar { background-color: #1a5694; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+
+/* 3. Area Utama (Topbar & Content) */
+.pa-main { flex: 1; padding: 30px; }
+.pa-topbar { display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.pa-topbar-email { font-size: 14px; color: #64748b; }
+.pa-breadcrumb { color: #1696d2; font-size: 13px; margin: 20px 0; cursor: pointer; }
+
+/* 4. Kartu Profil (Tengah) */
+.pa-card-container { display: flex; justify-content: center; margin-top: 40px; }
+.pa-card { background: white; padding: 40px; border-radius: 16px; width: 100%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.pa-field-group { margin-bottom: 20px; }
+.pa-field-group label { font-size: 13px; color: #666; display: block; margin-bottom: 6px; }
+.pa-field-input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; background: #f9f9f9; }
+
+/* 5. Tombol */
+.pa-btn-update, .pa-btn-password { width: 100%; padding: 12px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+.pa-btn-update { background-color: #1696d2; color: white; margin-bottom: 10px; }
+.pa-btn-password { background-color: #e63946; color: white; }
+.pa-btn-update:hover { background-color: #1280b8; }
+.pa-btn-password:hover { background-color: #d62d3a; }

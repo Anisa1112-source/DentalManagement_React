@@ -1,3 +1,4 @@
+/* 1. Navigasi & Header */
 .link-kembali-dokter {
   background: none;
   border: none;
@@ -6,108 +7,102 @@
   font-weight: 600;
   cursor: pointer;
   padding: 0;
-  margin-top: 20px;
-  margin-bottom: 16px;
+  margin: 20px 0 16px 0;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .detail-header-row-dokter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .detail-id-title-dokter {
   margin: 0;
   color: #1d6fd1;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .btn-ajukan-revisi-dokter {
   background: #e0273f;
   color: #fff;
   border: none;
-  padding: 9px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 13.5px;
+  font-size: 14px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
+.btn-ajukan-revisi-dokter:hover { background: #c72036; }
+
+/* 2. Grid Layout */
 .detail-grid-top-dokter {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 24px;
+  margin-bottom: 24px;
 }
 
-.detail-grid-bottom-dokter {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
+/* 3. Card Detail (Lebih Bersih & Modern) */
 .detail-card-dokter {
-  background: #cfe9fb;
-  border-radius: 14px;
-  padding: 22px;
-  border: none;
-  box-shadow: none;
-}
-
-.detail-card-header-dokter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
+  background: #ffffff; /* Ubah ke putih agar tidak terlalu biru */
+  border: 1px solid #d1e7f7;
+  border-radius: 16px;
+  padding: 24px;
 }
 
 .detail-card-title-dokter {
-  margin: 0 0 16px 0;
+  margin: 0 0 20px 0;
   color: #1d6fd1;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.detail-card-header-dokter .detail-card-title-dokter {
-  margin-bottom: 0;
-}
-
+/* 4. Baris Informasi */
 .info-row-dokter {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
 }
 
 .info-label-dokter {
-  font-size: 12.5px;
-  color: #5a6b7a;
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
 }
 
 .info-value-dokter {
   font-size: 14.5px;
-  color: #1c1c1c;
-  font-weight: 500;
+  color: #1e293b;
+  font-weight: 600;
 }
 
+/* 5. Timeline (Lebih Rapi) */
 .timeline-dokter {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
+  padding-left: 5px;
 }
 
 .timeline-item-dokter {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   align-items: flex-start;
 }
 
 .timeline-dot-dokter {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   margin-top: 5px;
   background: #1d6fd1;
@@ -115,22 +110,21 @@
 }
 
 .timeline-dot-dokter.pending {
-  background: #b9c4cd;
+  background: #cbd5e1;
 }
 
 .timeline-label-dokter {
   font-size: 14px;
   font-weight: 600;
-  color: #1c1c1c;
-  margin: 0;
+  color: #1e293b;
+  margin-bottom: 4px;
 }
 
 .timeline-label-dokter.pending {
-  color: #9aa6af;
+  color: #94a3b8;
 }
 
 .timeline-date-dokter {
-  font-size: 12.5px;
-  color: #7a8a96;
-  margin-top: 2px;
+  font-size: 12px;
+  color: #64748b;
 }
